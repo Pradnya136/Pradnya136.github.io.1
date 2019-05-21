@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PetsZone</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="sitepart.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+
+<body>
+<!-- 	<span class="span1">
+<div class="start">Choose another country or region to see content specific to your location.  
+	<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false"><img src=data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUTExMVFRUXFRcVGBcVFhUVFxUVFxYWFhgYGBUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLy0BCgoKDg0OFxAQGi4mIB0tLTctLTAtLS01Ly0rLS0tLTctLSsvMC0tKy0tLS0tLS0uNy0tLS8tKysrLS0uKystLv/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAAAwQBAgUGBwj/xABFEAABAwEEBgYGBwYFBQAAAAABAAIRAwQSITEFE0FRYXEGB4GRseEiMkJSofAUYmNyksHRI5OisuLxFTNDgsIWU2Sz0v/EABoBAQEAAwEBAAAAAAAAAAAAAAABAgMEBQb/xAAsEQEAAQIEBAUEAwEAAAAAAAAAAQIDBBESMRMhQVEUMlKx8ZGh0fBCcYEi/9oADAMBAAIRAxEAPwD5yiIuppFlzYzV2yWaPSdgRiJ2QJkgTOzDDAyq1qcC4xl8zjmcdpxRUSIiIIiICIpqNLIkST6rfe4nh4oqFFZqtumKlMNnaJnmMY7FBUpwd+0EZEb0GqIiIIiICIiAskQr9ms90XnYETmcBs2AnfjsIVKuQXGMpwwjBFaIiIgiIgIisUqJw9G845N3De79PklV0Vio0A3XsDDvE4HfEmRyUNRhBg/Pkg1RERBWbJTE45zkRIjbzcBsKrsMFTWiuCAABMAEgRMZYfn+SK2r182gyJnbGZMCdmJxzKrIgCAiIiCIiArdOtccypEi6AeYF0jgYhVFvTqRxBzG/wDQ8UV1672VGipUBDBN0Ti4nlyXIq1JOUAYAbhnnt5rNWqXRuAgDcFHCAiIiCIiArlipiZMTmZwgDaD4nZmqrDBUtqrBxwAG0xgCY2DYEVitWMBoMgbd+EYDYPHMqFEARBERAREQFfpWnV1L8SHDZtmJI7RkqBC3p1IEESN2WO8HYUV1rYWECpUGYhjJgnbJI59i5FR8meyBkAMgs1qpcZPIbgBkAtEBEREEREBERBtnz8fP556ots+fj5/PMNVkDaf7+SAbT/fyWCUAlEV3Reia1oddpMJxicYB57TwElSqqKYzqnKGVNM1TlEKSkoUXuMMa5x+qCfBfUNAdWLRDrQ6T7vll3k8l7rR+hLNRADKTcN4B+GQ7AuWrFZ+SP9nl9t/ZvjD5eafpz/AH7vhdk6LWup6tE+PwEldOl1dW8+wB+P82hfdRUjAJrVr41yev0j85s+Hbjp9/h8LqdXFvHsA/j/ACaVzrV0RtlPF1Ixww/mhfoXWJrU41yP5fWPxkcOien3+X5jtNnqMPpsc3ZiCB2HaoV+k7bouz1QQ+k0ztAg/DPtXidPdWdF8uoG4d2A+GR/h5rZTipjzR9Px8sZw8T5Z+v5+HyJF09M6Br2ZxFRhge0AY7d3hxK5i6aK6a4zplz1UzTOUw2z5+K1RbZ8/FZMWqyAgCwSgEoiICIiAiIgIiICIiAsgbT/fyQDaf7+SwSg2Jnn4+a1Ren6L6DNRzHubJcf2bTk6P9R31Rnx8dV69Tap1VfLbZtVXatNLPRbok+0OBeCG53cpG9x9lvDMr67ojRlKztDWNEgRMAdgGwcFDYLO2ky63mSc3HefnBWtYvKquVVzqr+nb97vRi3TRGmn5/ey5rFnWKnrE1iutNK5rFnWKnfWdYms0rZqLGtVXWJfTWaVrWrGsVXWLGsTWaWdIWSnWbdeJ3HaOX6L5R0t6FupOLqIwOIaMnfd3H6vcvqusUNqY2o0scJB+QQdhUi5VTOqjf3/tdEVRpq29v6fnxZG9ez6W9HiHOc0S8C9AH+az3wPeG0bYXi5XqWL9N6nON+sdnn37NVqrKf8AJ7tjjz8Vqi2z5+K3NLVERAREQEREBEU9GlkSJJ9VvvHeeHiioECt12OZGsY2DuDRPItyKr1acZGQcj+R3FBoSiIiOloLR4qvl3+Wz0n8dze0/CV9P6NUYaapGLsG/VYNg7R8AvI2SyaqmykPW9Z/F7tnYIC9zRhrQ0ZAAd2C+dv4jj3pnpTt+Xv2cPwbMR1q3dDWrYVFSFRbCoprTSuCosiooGmMfnd/damostWTHJa1iX1VD1m+pqNKzfTWKtfWC9NRpWb6wairX1kO79yal0pzUWusUL3EYEKNz1JqIpVtP0L9O8PXZ6TTw9od3gvl/SKwBpFZghjziPdqZkcjmO1fVjUXjLXZWk1KLvVcS0cDMsd2YKW8RwLsV9J5S2V2ONamjrHOHg0W1amWuLXCC0kHmMCtV9JE5vnwlEWWtJMDEog1pJgYlYK6NCgGNvOiYxzIg4ezsInEZGO2hVdJJG/gPgMEVqiIiCssqFtx4xu4HnLoB7Dmqy2p1CDhyIORG4orsPrtqMFSoIYCYbMlzsv1XJrVbxyAGwDILFSoTGwDICYHetAEBd3oVor6Ta2MJhrAarjngyI/iLFwl9G6prL6Forb3MpDsBe7vvM7ljX5ZWneHepdFm3w41XesD6o3zvXc/wUe+e4fqpGlXg5efGDs07U+7snGXqt6vZzxoYe+e4fqss0S33z+ELoErMrLw1rsx8Td7qA0QPfPd5rP+Dj3z3BdAFQ222MpU3VKhusYJJ4cN52Abynhrc9PdPEXO6q7RTQCTUgDEkgAAcTK4Vr01YaZj6TeP1GF4/EMPiuZZGWjSr21Kjgyx33AUg8hzrgzIAN43rsyRAmN59Ho3RFkpikxtJpBe8gvAc8VmEuAvESS0Cp2NW3wlmnzRzPEXO7mWfT1heY+kOb9+mQO/ILvUdHMe0OZVvNORbBB5EFUn2Oy1mE1KbP2lnbVqvDRfEtAY4OiZgVI+6uBpHRlfR7jabI4CiGB9WjUeSTjDsCIyu4zMzG5XwlirlEZSeIud3rv8IHvnuH6rLNFgGb57uCzoXS1O00W1qeTswc2uGbTxHxwO1XSVq8NbidjxFzuqP0W04lx4CFA7Q49893mujKSpOHtz0IxFyOrlnQo989w/Vca39FmuqOdrXCY9kbhxXq7yp1TJJWM4SzVvT7s4xd6nar2fI+sPQ2orMeDIqsmYj02Q13wLD2leVX1brOst+xB+2lVaf9rwWEd5b3L5Su+3ERTER0clczNUzPUAVuytbtu5GZEiIMQecTGKr03QVvaq94zEb+J3rNixWrThJIG/M7JPYBhwUSIiCIiAiIgIiINs+fj5r6x1aUwLA0+/Vqu7iGf8V8lX1/q5dOjqP3q3/tcsK9mVO70oUtN8KILYLUzWBUCyHhQtCka1QSh68F1k2p9avZdHUrt6qXVXXi4NusBuh10Ex6NTLa0L3jWr510ia0dIbJfpl96ztubmPa+sdYZIBDYLiPJbbPmz7RJL19esxrdXSa17Rjq6JZTr0z7zGGA48DBz9aYXlaunajqt5t30ajHPdBY2/TgGoWOh1J7qDn0303YhwpESHSvRaep61pbArgY3RZG1G8xVqvbTEfeXzPpDZalezXaIvG+HG69zr7GhwIbLnNLQ5wP7NzmSDjIhbbVMTuO9YdMVKbKZfcc0NoCb0MJpU2Mpio7GGMqmrUIHpEmi1slxXs7FbAWxUhrX5utF1tSvI9mzu9Rm5rsfq7T8m6JWCtQpVDVaWBxaWAue0tuh194FP0gPSAOQgG8QBj9I6MMuMa4AUg8B14WWm5tQEesbRQqPa4H3nOVvUxGw5XRq0Osulq9kddFO0tdaKQbegQ5xaLrgC11wPkZeiIwX0AvXzfSQaekVkush+qe59QerVbqaga4AEwBBZOGI5L6O5q03uk94GpeFg1AsOCjIWoZfU3KErcrUqji9Mqd6wWobqV/wDA4P8AyXxUb19v6UmLFaz/AONV/lK+HArbbYVMkoiLNiIiICIiAiIgIiIMOX1bqtr3rCW/9uvUb+INf/yK+VR3L3nVHbvTtFAnNrarR9wlr/52dyxr2ZUvpK2atApWhaWTdoUrWrVgU7Aoo1q8J1t6Lq6qjbqBe2pZXEuNMw/UvgOIMHIgcIc4r6AxqlNMEEEAgiCDiCDmCFlRVpqiR5ixW6jpCztrU5rMeS1lKoCynLTBNVvttB3yDhAlcev0eLq7HBziXV2UtZA/avYDVr1IGDKbWUjZ2Nwu36ud+TUt/RO26Nr/AEnRl+tZrzn1LEHlsFzS0loyeBgRgXAhuDk0f1rWNur+lUatnrMcaTqQY5wpseW/tHF0GGtY2RF70jAK6Ipne3zhEWitBEtpVKheS2hZKzyDdc2nUpBpqU3bKlGtRfVn3K1UQb8H1jmtsdOpVqHV6tpqVDSYTSrNGdTUjBrzPpXYM5kheYq9aWj6bbtAVK1SlRbRpDVuayuXNZlPpANcwA3mg+kYlQUtBaQ0u9rrU2pYbCGMb9H1ji6qGuLh6BAjYLzgMGtgHNKqap518oM0nVzZ32u2WrSby91NznUbNrDJ1d+8YwENGDRG9wzC+huapbLYmUqbaVNoYxjQ1rRkAMgjmrRXXqnNVVwULgrT2qF4WAruWq3cFGVUcLp1XuaPtJ3saz8b2t8CV8WYvp3Wzbrlmo0QcatUvP3KTcf4ns7l8zAwW2jZjUIiLNiIiICIiAiIgALZzIMHZnz3K9ZbOGi87MbsYgbMhenmMCM1UtNQOdIygDcMNw2DgionFWNB6UfZbQyswgES0ziC1wumR2zzAVdQ1QpVGcZI9xV6dW1ri39lgfc2bNqy3rAtn2X4PNeVpPv0wfaZDXcW+yfyWGrxLldyiqaZnZ5ly7dpmYzexb1g237L8HmpmdYVt+y/B5rxrVds9PLCXH1Ru4n9Pk6eNc9UtM4i76pesZ1g23fS/d+amZ1g23fS/d/1Ly9Vr2EB4BB3AY/7omVqWxtkHI/O1JvXPVKTibvql64dYNt30v3f9SjtPTS01MKjLM8fXoh3iV5gFbgqce56pY+Ju+qXorN0wtFPGnTszPuUGs/lKmPWDbd9L93/AFLy5K0cnHueqTxN31S9O7rBtu+l+7/qUL+sG2/Zfu/NeZeoXJx7nqlfE3fVL0x6f20mBqiT9n5qF/WBbPsvwea5DKQY28YnfmIOGAkSImRxwXNtD5cTvKy41yP5M+Pdy80vRu6wLZ9l+DzUf/XttJgauTh6nmvMOWzH3Gmoc/VZxcdvYMVsouXKpiIndtou3apiIlN0p01VtVYGoQdW3Vi6IGZLjG8kx/tC5zVBSCnXt0RlEQ9OIyjIKIrVnoGbrRLz3MG88fDnlkqqit2hrmm7UAx2gNB5ggY9qrVGQYz2gjaDkUGqIiIKzZQAccDhjhltHAnY5V2mFLXtBcANwicJI2Cdw80Ur1QZDciZOETjOWxuOAUKIAiC1eFsiCKzVzTeHZjIje05hdGrTAhzTLXYtP5HiFzajVLYLXclr8aZz3tPvBcWKw+uM43hz4izrjON11qv0qpaWvbjAAPPEY9mXJU6lK7BmWnFrhkQt6VQjLyI3FeNPJ5U8nbdXaWipUA23WZydpKpGrJn4DAAbgFVdUJ/LcBwUjCsaqs2quqZWA5ZvKEOWbyxa80t5YLlHeWC5DNlxW9AhuZg7ciCN3ltChvwtbVXLjJ79pO8/OCyiWdM9UdapOAmBvzPE/OCrOKkcVrTpFxgeQG8rKObbHNpSpXjGQzJ2AbSVSttoD3ANwY3Bo8SeJUlvtYI1dP1fad75/8AlVqbV6+Ew+j/AKq3erhrOmNVW6SmFusBZXe6RXGWgseKjcQRHMwJB3GRKpkLenUInIg5g5FFdW1VmwHvaC5zfRZmGg4yVyHvJMlHvJMlYQEREQREQEREG2fPxWqLbPn4oNCFC9isxGfctHCUVix251OQReYc2nxB2FdSk1rxepm8NrfabzG3mFxXsWjSWmWkgjaDBXHfwtNzntLnvYem5z2l3WlSNKoUdMThVZe+s2Gu7dh+Cu0qlJ/qVGzuf6B+OBXlXcLco6PMu4W5R0TzPPx81iVsbM8eyTyx8FgtO4zyOPmuXKXLNMsSs8VhrTuPcVn6PUPsntw8UykilE9yicVJVNNvr1Gjg303dwVKtpZrf8pmPvVMT2NGAXTaw1yvaHTaw1yvaFo0wBeebjd5zP3RtXNtukC8XGC6zdtdxcfyVWrVc83nEuO8/OC2YxerYwlNvnPOXp2cNTb5zzlljJ5+Pn885WhGtUmfPx8/nn2w6WqzkmSwiCIiAiIgIiICIiAiIgLICALBKDaZ5+K1RbZ8/FBoQo3MUqIqq5i1LFbLVoWKZGaCnUc31XOb90keCtM0lXH+q/vJ8Vpq9p+fJaFixmiJ3hJimd4Tu0pXd/qvnnE923551alZ7vWc533nE+K3uLcMnn4+fj4ot0xtBFNMbQrBi3axTBi2DVlkuaNrFKAsoqCzkmSwiNs+fj5/PPVFtnz8fP55hqiIgIiICIiAiKxQpYiBL3eqNg+sf07UVXQK9a6dSnF8hwPbPAk4qrVYBBGRynMRmCgjJRERBERAJREAQZa0kwMSVlzYOPz27Qr9Ck1jbxIJzkRxAAnLImcnRHOlaKl5xPzuy2ctiKjJRERBERBlxlYRWrPRMgN9c48GCJnnHdzyKqoCrtqa+mQKkOB+PbEyN6q1WREGQRIPDEY8cCg0RERBERBklYRSUaU44wMzEwgUKJdMbP7AcyVGV0qtZrGgNx3biMROWMmZ34Rw5qKIiIgrLahF17c2CDwxOPLGPkKssseQZCK7BtYLBUqAHO4wb8iTPyFya1UuMn4YADcBsCw95OfLcANwAyWqAiIiCIiAArdmhhxkHAziMM4ykTGYVUFS17QXQDs7zzO1Fa1qs4DKZ5neY8NijREQREQEREBWm1i0tqN2ANPAxGPAxgf0VVbU3kZct4I3EbUV1q1qF0VHhrnkeg3Y0HaZXJe8kyc1h7yTJWEBEREEREG9GkXGArAqhogtxiIxAOImRvkQYzCrMdCVHlxk4lFYc4nErCIiCIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiD//2Q== width="20px" height="20px">
+    India <span>aaaaaaaa</span>    
+  </button>
+  <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+    <button class="dropdown-item" type="button">India</button>
+    <button class="dropdown-item" type="button">United States</button>
+    <button class="dropdown-item" type="button">Enter valid country</button>
+  </div>
+</div>
+  <input class="btn btn-primary" type="submit" value="Continue">
+  <div class="dropdown-menu dropdown-menu-right">
+    <button class="dropdown-item" type="button">India</button>
+    <button class="dropdown-item" type="button">United States</button>
+    <button class="dropdown-item" type="button">Other Countries</button></span>
+  </div>
+</div>
+</div>
+</span> -->
+<div id= "navbar">
+<ul class="nav">
+	<li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><i class="fas fa-paw"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="file:///C:/Users/SHUBHAM-DELL/Desktop/p-test/Folder%20new/site.html#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Our Team</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Pet Food</a>
+     <li class="nav-item">
+    <a class="nav-link" href="#">Grooming</a>
+     <li class="nav-item">
+    <a class="nav-link" href="#">Petting</a>
+     <li class="nav-item">
+    <a class="nav-link" href="#">Accessories</a>
+     <li class="nav-item">
+    <a class="nav-link" href="#">Pet Help</a>
+     <li class="nav-item">
+    <a class="nav-link" href="#"><center><i class="fas fa-search"></i><form method="get" action="/search_dark" id="search_dark">
+  <input name="q" type="text" size="30" placeholder= "           Search Your Future Pet" /></form></center></a>
+
+     <li class="nav-item"><div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <i class="fas fa-gift"></i>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+  	<a class="dropdown-itemHead" >Your Bag is empty.</a>
+    <a class="dropdown-item" href="#"><i class="fas fa-shopping-bag"></i> Bag</a>
+    <a class="dropdown-item" href="#"><i class="fas fa-heart"></i> Favorites</a>
+    <a class="dropdown-item" href="#"><i class="fas fa-box"></i> Orders</a>
+     <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Account</a>
+    <a class="dropdown-item" href="file:///C:/Users/SHUBHAM-DELL/Desktop/p-test/boot1register.html"><i class="fas fa-user-circle"></i> Sign in</a>
+
+  </div>
+</div>
+  </li>
+
+  
+</ul>
+
+</div>
+<!-- this is section 0 strt -->
+<section class="sec0">
+<h1 class="h11" >I..</h1><br>
+<div class="btndiv"> 
+<div class="B1"><i class="fas fa-dove"></i> </div>
+<div class="B2"> <i class="fas fa-cat"></i></div>
+<div class="B3"> <i class="fas fa-dog"></i></div>
+<div class="B4"> <i class="fas fa-bug"></i></div>
+<div class="B5"> <i class="fas fa-chess-knight"></i></div>
+<div class="B6"> <i class="fas fa-crow"></i></div>
+</div>
+<h1 class="h22-0">Animals are beautiful creatures</h1>
+<h1 class="h22" >7 months baby German Sherpard up for adoptation!!</h1><br>
+<h2 class="h22-1" >Lets spread some love through adopting</h2>
+<h2 class="h22-1" >This experience is Blissful</h2>		
+<h3><a class="link1" href="#">Adopt <i class="fas fa-angle-right"></i></a>
+	<div class="imgg"> <img src="https://newevolutiondesigns.com/images/freebies/dog-wallpaper-preview-13.jpg" width="950px"></div>
+<!-- <a class="link2" href="#">Where <i class="fas fa-angle-right"></i></a> --></h3>
+ </section>
+<!-- this is section 1 strt -->
+<!-- wrapping this in div -->
+<div class="divwrap"> 
+<h1 class="h33" >Pets are like our family <i class="fas fa-dog"></i></h1><br>	
+<h2 class="h33-3" >No burglar alarm can be better than a dog at home.</h2><br>
+<h2 class="h33-3" >Give chance to these furballs !</h2>
+<h3><a class="link3" href="#">More <i class="fas fa-angle-right"></i></a><a class="link4" href="#">Where to find<i class="fas fa-angle-right"></i></a> </h3>
+<section class="sec1">
+
+
+<img class="img1" src="https://newevolutiondesigns.com/images/freebies/dog-wallpaper-preview-40.jpg"
+ width="850px" height="550px">
+</section>
+</div>
+<!-- this is section 2 strt -->
+<!-- wrapping like before under div -->
+<div class="divwrap1" >
+<h1 class="h44" >Pets are Awesome</h1><br>
+
+<h2 class="h44-4">Whether you believe it or not, pets are a great way to improve your mood and temperament.</h2><br>
+<h2 class="h44-4">Cutest creatures on Earth</h2>	
+<h3><a class="link1" href="#">More</a>
+<a class="link2" href="#">Where_?</a></h3>
+<section class="sec2">
+	
+
+<img class="img1" src="https://newevolutiondesigns.com/images/freebies/dog-wallpaper-preview-23.jpg">
+</section>
+ </div>
+
+<!-- this is section 2.1 strt -->
+
+<div class="divwrap3" > 
+<h1 class="h77" >Fur Care!</h1><br>
+
+<h2>“Our perfect companions never have fewer than four feet.”</h2>	
+<h3 class="h55" ><a class="link5" href="#">Get One</a>
+<a class="link5" href="#">Care enough?</a></h3>
+<section class="sec2">
+	
+
+<img class="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXk58jCOc0uShVLX2tUIHQPBkAng6sXKoHVNW0BztvYKxyKOVa">
+</section>
+</div>
+
+
+<!-- this is section 2.2 strt -->
+
+<h1>Different is Good</h1><br>
+
+<h2>Lets start new with brand new</h2>	
+<h3 class="h88" ><a class="link6" href="#">More</a>
+<a class="link6" href="#">Where_?</a></h3>
+<section class="sec2">
+	<div class="parentimgdiv">
+
+	<div class="container" >
+<div class="Dimg1">
+	<h5 class="imgH1">Kitten (3Months Old)</h5>
+	<h6 class="imgH2">Looking for new Homie
+	{Women and cats will do as they please, and men and dogs should relax and get used to the idea.}</h6>
+	<h3 class="h55" ><a class="link5" href="#">Register !!</a>
+</h3>
+	<img class="Cimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9KITjwcakboRWcAg_0BRR9ks-eRUN6mIZikSWW3Cqg0GzV87Y"></div>	
+<div class="Dimg2">
+	<h5 class="imgH1">Pets are Awesome</h5>
+	<h6 class="imgH2">Look how happy he is with his new Hooman.
+	{An animal's eyes have the power to speak a great language. .}</h6>
+	<h3 class="h55" ><a class="link5" href="#">NewBiee here?</a>
+<a class="link5" href="#">Options?</a></h3>
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8EYY_SXNW3rKFu37stVjuGVO3fR7hwNdcKvaONA_FTc62DfCn"></div>
+<div class="Dimg3">
+	<h5 class="imgH1">Dogs are Honest creatures</h5>
+	<h6 class="imgH2">Make someones life memorable.
+	{Outside of a dog, a book is a man's best friend. }</h6>
+	<h3 class="h55-a" ><a class="link5" href="#">Helping Hands  <i class="fas fa-hand-holding-usd"></i></a>
+<a class="link5" href="#">More Info?</a></h3>
+	</div>
+<div class="Dimg4">
+	<h5 class="imgH1">All Animals deserve love</h5>
+	<h6 class="imgH2">Spread Happiness.
+	{Until one has loved an animal a part of one's soul remains unawakened. ...}</h6>
+	<h3 class="h55" ><a class="link5" href="#">Sign In</a>
+<a class="link5" href="#">Get Them?</a></h3>
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIC-yBM25GoYVQD3yJ7HbZe7Cb6lrm2-jnivS4NCMu_fRu99zi"></div>
+<div class="Dimg5">
+	<h5 class="imgH1">All it starts with Us !</h5>
+	<h6 class="imgH2">Join hands in for adoption.
+	{ dog is the only thing on earth that loves you more than you love yourself}</h6>
+	<h3 class="h55" ><a class="link5" href="#">Get IN</a>
+<a class="link5" href="#">Adopt!</a></h3>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgZAAyonDXbJ_fIIsKImnhO6xqQn4GFTtEdFhO3WZL6hRM2vZ6MQ"></div>
+<div class="Dimg6">
+	<h5 class="imgH1">Spread word about this</h5>
+	<h6 class="imgH2">Get this lil' ones there happiness too..
+	{An animal's eyes have the power to speak a great language. }</h6>
+	<h3 class="h55-b" >
+<a class="link5" href="#">Donate for Them?</a></h3>
+	</div>
+
+  </div>
+
+ 
+</section>
+  </div>
+<!-- this is section 3 strt -->
+<section class="sec3">
+	<div id="polina">
+<h1 class="aaa">We are looking for someone like you !!</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, </p>
+
+</div>
+<div class="dogvidd">
+	<video class="video" poster="https://d2v9y0dukr6mq2.cloudfront.net/video/preview/Vm8N8ry5eikbknln4/pets-on-a-white-background_sbznkern__SB_PM.mp4" id="bgvid" playsinline autoplay muted loop>
+	<source src="https://d2v9y0dukr6mq2.cloudfront.net/video/preview/Vm8N8ry5eikbknln4/pets-on-a-white-background_sbznkern__SB_PM.mp4"></div>
+<!-- this is section 4 strt -->
+<div class="last"><section>
+	<Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	qxcepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</section>
+
+		<div class="main1"><p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+		<br>
+		
+	</div>
+	<ol>
+			<li>uis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa</li>
+				<li>t amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute igiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco </li>
+					<li>uis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugia</li>
+		</ol>
+
+	<div class="main-grid">
+
+		<div ><a class="H" href="#"> Animals</a></div>
+		<div ><a class="H" href="#"> Pets</a></div>
+		<div ><a class="H" href="#">Shopping</a> </div>
+		<div ><a class="H" href="#"> Grooming</a></div>
+		<div ><a class="H" href="#">Cleaning</a> </div>
+		<div ><a class="H" href="#">Animals</a> </div>
+		<div ><a class="H" href="#">Caring</a> </div>
+		<div ><a class="H" href="#">Tips</a> </div>
+		<div ><a class="H" href="#">Against Odds</a> </div>
+		<div ><a class="H" href="#"> Helping Hands</a></div>
+		<div ><a class="H" href="#">Accessoris</a> </div>
+		<div ><a class="H" href="#">Beauty</a> </div>
+		<div ><a class="H" href="#"> Talent</a></div>
+		<div ><a class="H" href="#">Amazing</a>
+		<div ><a class="H" href="#"> Goregous</a></div>
+		<div ><a class="H" href="#">Animals</a> </div>
+		<div ><a class="H" href="#">Adorabe</a> </div>
+		<div ><a class="H" href="#">Animals</a> </div>
+		<div ><a class="H" href="#">Cuties</a> </div>
+		<div ><a class="H" href="#">Annies</a> </div>
+		<div ><a class="H" href="#">Navie</a> </div>
+		<div ><a class="H" href="#">Animals</a> </div>
+		
+		<div><a class="H" href="#">Animals</a> </div>
+ </div>
+
+
+<!-- 	<iframe id="video" src="https://ak7.picdn.net/shutterstock/videos/32979487/preview/stock-footage-close-up-a-portrait-of-a-labrador-dog-being-caressed-by-a-teen-girl-view-of-hands-and-a-dog.webm">
+</iframe> -->
+
+
+
+</section>
+
+
+
+</body>
+<script type="text/javascript" src="sitepart.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</html>
